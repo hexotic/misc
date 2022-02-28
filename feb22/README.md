@@ -18,7 +18,6 @@ docker run --name vpp_build -it -v $PWD/vpp:/vpp ubuntu:20.04
 apt-get update
 apt-get install -y build-essential git vim
 apt-get install -y python3 sudo
-apt-get install -y libncurses5-dev libncursesw5-dev
 
 make install-dep
 make install-ext-deps
