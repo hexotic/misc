@@ -1,0 +1,34 @@
+[alias]
+  co = checkout
+  dc = diff --cached
+  rc = rebase --continue
+  ra = rebase --abort
+  rh = reset HEAD
+  lo = log --oneline
+  l1 = log --oneline -1
+  cm = checkout master
+  ci = commit
+  st = status
+  stu = status -uno
+  cb = rev-parse --abbrev-ref HEAD
+  br = branch -r
+  b  = branch
+  url = remote -v
+
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  ldg = log --graph --decorate --name-only --oneline
+
+  nom = diff --name-only master
+  no1 = diff --name-only HEAD^
+  dno = diff --name-only HEAD^
+  dwd = diff --color-words --word-diff-regex='.|[^[:space:]]'
+  cow = commit -a -m wip
+  cof = commit -a -m fixup
+
+  gh = grep -Hn
+
+  cn = clean -e '*.swp' -e 'log*' -fdx
+  mnoff = merge --no-ff
+
+  tidyrb = remote update origin --prune
+
