@@ -26,4 +26,6 @@ docker-compose logs -f -t agent
 docker inspect -f "{{.State.Running}}" $CONTAINER_ID
 docker inspect -f "{{.State.ExitCode}}" agent
 docker inspect agent:latest | jq -r '.[0].Config.Labels.version' | tee /tmp/version.txt)
+
+sudo nsenter -t $(docker inspect --format '{{ .State.Pid }}' DOCKER_NAME) -n ifpps eth0
 ```
